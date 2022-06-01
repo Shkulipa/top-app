@@ -10,7 +10,8 @@ import Error from 'next/error';
 function Home({ menu }: HomePages): JSX.Element {
   const [rating, setRating] = useState<number>(0);
 
-  if(!menu) return <Error statusCode={404} />;
+  const isError = false;
+  if(isError) return <Error statusCode={404} />;
 
   return (
     <>
