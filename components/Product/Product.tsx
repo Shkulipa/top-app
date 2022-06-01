@@ -1,5 +1,4 @@
 import { ProductProps } from "./Product.props";
-import Image from 'next/image';
 import styles from "./Product.module.css";
 import { Card } from "../Card/Card";
 import { Button, Divider, Rating, Review, ReviewForm, Tag } from "..";
@@ -32,9 +31,8 @@ export const Product = motion(forwardRef(({ product, className, ...props }: Prod
     <div className={className} {...props} ref={ref}>
       <Card className={styles.product}>
         <div className={styles.logo}>
-          <Image 
+          <img 
             src={src}
-            loader={() => src}
             alt={product.title}
             width={70}
             height={70}
